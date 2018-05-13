@@ -11,6 +11,14 @@ def checkio(words: str) -> bool:
     return False
 
 
+checkio2 = lambda words: True if "True, True, True" in "".join(str([x.isalpha() for x in words.split()])) else False
+
+
+def checkio3(s):
+    l = [x.isalpha() for x in s.split()]
+    return [True]*3 in [l[i:i+3] for i in range(len(l)-2)]
+
+
 if __name__ == '__main__':
     assert checkio("Hello World hello") == True, "Hello"
     assert checkio("He is 123 man") == False, "123 man"
