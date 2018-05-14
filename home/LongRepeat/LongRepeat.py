@@ -15,3 +15,4 @@ if __name__ == '__main__':
     assert long_repeat('ddvvrwwwrggg') == 3, "Second"
     assert long_repeat('abababaab') == 2, "Third"
     assert long_repeat('') == 0, "Empty"
+
