@@ -4,7 +4,7 @@ def long_repeat(line):
 
 
 def long_repeat2(line):
-    return len(line) and 1+long_repeat(''.join(u for u,v in zip(line,line[1:]) if u==v))
+    return len(line) and 1 + long_repeat2(''.join(u for u, v in zip(line, line[1:]) if u == v))
 
 
 long_repeat3 = lambda l: len(l)and max(map(len, dict(__import__('re').findall(r'((.)\2*)', l))))
