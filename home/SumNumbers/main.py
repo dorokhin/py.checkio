@@ -1,3 +1,6 @@
+sum_numbers = lambda text: sum(int(word) for word in text.split() if word.isdigit())
+
+
 def is_int(value):
     try:
         int(value)
@@ -6,7 +9,7 @@ def is_int(value):
         return False
 
 
-def sum_numbers(text: str) -> int:
+def sum_numbers2(text: str) -> int:
     result = 0
     cleared = [x for x in text.split(' ') if is_int(x)]
     for item in cleared:
